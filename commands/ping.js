@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     const userurl = message.author.avatarURL;
     let botembed = new Discord.RichEmbed()
         .setColor("RANDOM")
-        .setDescription(`Getting Ping.`)
+        .setDescription(`Getting Ping..`)
     message.channel.send(botembed).then(message =>{
         botembed.setColor("RANDOM")
         botembed.setDescription(`:ping_pong: My Ping Is: **\`${bot.pings[0]}ms\`**`)
