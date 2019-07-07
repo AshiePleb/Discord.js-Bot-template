@@ -11,14 +11,14 @@ bot.login(config.bot.token).then(function() {
 })
 
 bot.on('ready', async() => {
-    bot.user.setActivity(`Oh I'm Alive!`)
+    bot.user.setActivity(`With You OwO`)
 });
 
 fs.readdir('./commands', (err, files) => {
     if (err) console.log(err)
     let jsfile = files.filter(f => f.split(".").pop() === "js")
     if (jsfile.length <= 0) {
-        console.log('No commands found!')
+        console.log('No commands have been found why not make some!')
         return;
     }
 
