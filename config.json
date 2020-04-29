@@ -1,9 +1,6 @@
 {
-  "owner": {
-    "id": "YOUR ID"
-  },
-  "bot": {
-    "token": "TOKEN",
-    "prefix": "PREFIX"
-  }
+    "owner" : "YOUR ID",
+    "token" : "TOKEN",
+    "prefix" : "PREFIX",
+	"game" : "WHAT YOU WANT IT TO BE PLAYING"
 }

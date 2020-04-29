@@ -4,14 +4,14 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 const config = require("./config.json");
 
-bot.login(config.bot.token).then(function() {
+bot.login(config.token).then(function() {
   console.log(`Connected to discord and logged in as ${bot.user.tag}`)
 }).catch((e) => {
   console.log(e)
 })
 
 bot.on('ready', async() => {
-    bot.user.setActivity(`With You OwO`)
+    bot.user.setActivity(config.game)
 });
 
 fs.readdir('./commands', (err, files) => {
@@ -29,7 +29,7 @@ fs.readdir('./commands', (err, files) => {
     })
 
     bot.on('message', async message => {
-        let prefix = config.bot.prefix
+        let prefix = config.prefix
 
         if (!message.content.startsWith(prefix)) return
         if (message.author.bot || message.channel.type === "dm") return
